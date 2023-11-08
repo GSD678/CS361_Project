@@ -46,7 +46,6 @@ if (Astro.cookies.has("session")) {
     // This will prevent the browser from storing session data
     auth.setPersistence(inMemoryPersistence);
 
-    let document;
     const form = document.querySelector("form") as HTMLFormElement;
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -75,5 +74,3 @@ if (Astro.cookies.has("session")) {
         }
     });
 </script>
-
-
