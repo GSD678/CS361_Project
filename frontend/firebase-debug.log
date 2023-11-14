@@ -1,0 +1,83 @@
+[debug] [2023-11-10T00:09:17.256Z] ----------------------------------------------------------------------
+[debug] [2023-11-10T00:09:17.259Z] Command:       /opt/homebrew/Cellar/node/21.1.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2023-11-10T00:09:17.259Z] CLI Version:   12.8.1
+[debug] [2023-11-10T00:09:17.259Z] Platform:      darwin
+[debug] [2023-11-10T00:09:17.259Z] Node Version:  v21.1.0
+[debug] [2023-11-10T00:09:17.259Z] Time:          Thu Nov 09 2023 19:09:17 GMT-0500 (Eastern Standard Time)
+[debug] [2023-11-10T00:09:17.259Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-10T00:09:17.292Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-10T00:09:17.292Z] > authorizing via signed-in user (karimking1998@gmail.com)
+[debug] [2023-11-10T00:09:17.293Z] [iam] checking project mmaclub-e3487 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-10T00:09:17.293Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions [none]
+[debug] [2023-11-10T00:09:17.293Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions x-goog-quota-user=projects/mmaclub-e3487
+[debug] [2023-11-10T00:09:17.293Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-10T00:09:17.506Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions 200
+[debug] [2023-11-10T00:09:17.507Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-10T00:09:17.507Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487 [none]
+[debug] [2023-11-10T00:09:17.656Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487 200
+[debug] [2023-11-10T00:09:17.656Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487 {"projectId":"mmaclub-e3487","projectNumber":"13647467355","displayName":"MMAClub","name":"projects/mmaclub-e3487","resources":{"hostingSite":"mmaclub-e3487"},"state":"ACTIVE","etag":"1_cbf2bd05-00b6-4969-a1ff-9501d561f531"}
+[debug] [2023-11-10T00:09:18.962Z] defaultcredentials: writing to file /Users/karim/.config/firebase/karimking1998_gmail_com_application_default_credentials.json
+[debug] [2023-11-10T00:09:18.963Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites pageToken=&pageSize=10
+[debug] [2023-11-10T00:09:19.566Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites 200
+[debug] [2023-11-10T00:09:19.566Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites {"sites":[{"name":"projects/mmaclub-e3487/sites/mmaclub-e3487","defaultUrl":"https://mmaclub-e3487.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-10T00:09:19.567Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites 
+[debug] [2023-11-10T00:09:20.005Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites 200
+[debug] [2023-11-10T00:09:20.006Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites {"sites":[{"name":"projects/mmaclub-e3487/sites/mmaclub-e3487","defaultUrl":"https://mmaclub-e3487.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-10T00:09:20.006Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487/webApps/-/config [none]
+[debug] [2023-11-10T00:09:20.409Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487/webApps/-/config 200
+[debug] [2023-11-10T00:09:20.409Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487/webApps/-/config {"projectId":"mmaclub-e3487","appId":"1:13647467355:web:47491e1a382bf8676f007e","storageBucket":"mmaclub-e3487.appspot.com","apiKey":"AIzaSyAkbPxM3VzRSTYg9FGmua4iIQfPmB74dBs","authDomain":"mmaclub-e3487.firebaseapp.com","messagingSenderId":"13647467355","measurementId":"G-6CCPH49TE6"}
+[info] 
+   Thank you for trying our experimental support for Astro on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-11-10T00:09:28.632Z] Error: ENOENT: no such file or directory, lstat '/Users/karim/Desktop/OSU/CS%20361/Course%20Project/CS361_Project/frontend/dist/client'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-11-10T00:11:49.548Z] ----------------------------------------------------------------------
+[debug] [2023-11-10T00:11:49.550Z] Command:       /opt/homebrew/Cellar/node/21.1.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2023-11-10T00:11:49.550Z] CLI Version:   12.8.1
+[debug] [2023-11-10T00:11:49.551Z] Platform:      darwin
+[debug] [2023-11-10T00:11:49.551Z] Node Version:  v21.1.0
+[debug] [2023-11-10T00:11:49.551Z] Time:          Thu Nov 09 2023 19:11:49 GMT-0500 (Eastern Standard Time)
+[debug] [2023-11-10T00:11:49.551Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-10T00:11:49.591Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-10T00:11:49.591Z] > authorizing via signed-in user (karimking1998@gmail.com)
+[debug] [2023-11-10T00:11:49.591Z] [iam] checking project mmaclub-e3487 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-10T00:11:49.592Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions [none]
+[debug] [2023-11-10T00:11:49.592Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions x-goog-quota-user=projects/mmaclub-e3487
+[debug] [2023-11-10T00:11:49.592Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-10T00:11:49.778Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions 200
+[debug] [2023-11-10T00:11:49.779Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmaclub-e3487:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-10T00:11:49.779Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487 [none]
+[debug] [2023-11-10T00:11:49.949Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487 200
+[debug] [2023-11-10T00:11:49.949Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mmaclub-e3487 {"projectId":"mmaclub-e3487","projectNumber":"13647467355","displayName":"MMAClub","name":"projects/mmaclub-e3487","resources":{"hostingSite":"mmaclub-e3487"},"state":"ACTIVE","etag":"1_9f3c5ff2-7d1d-4276-b0ef-690679b8e1dc"}
+[debug] [2023-11-10T00:11:51.462Z] defaultcredentials: writing to file /Users/karim/.config/firebase/karimking1998_gmail_com_application_default_credentials.json
+[debug] [2023-11-10T00:11:51.463Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites pageToken=&pageSize=10
+[debug] [2023-11-10T00:11:52.015Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites 200
+[debug] [2023-11-10T00:11:52.015Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mmaclub-e3487/sites {"sites":[{"name":"projects/mmaclub-e3487/sites/mmaclub-e3487","defaultUrl":"https://mmaclub-e3487.web.app","appId":"1:13647467355:web:47491e1a382bf8676f007e","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-10T00:11:52.015Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:13647467355:web:47491e1a382bf8676f007e/config [none]
+[debug] [2023-11-10T00:11:52.319Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:13647467355:web:47491e1a382bf8676f007e/config 200
+[debug] [2023-11-10T00:11:52.319Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:13647467355:web:47491e1a382bf8676f007e/config {"projectId":"mmaclub-e3487","appId":"1:13647467355:web:47491e1a382bf8676f007e","storageBucket":"mmaclub-e3487.appspot.com","apiKey":"AIzaSyAkbPxM3VzRSTYg9FGmua4iIQfPmB74dBs","authDomain":"mmaclub-e3487.firebaseapp.com","messagingSenderId":"13647467355","measurementId":"G-6CCPH49TE6"}
+[info] 
+   Thank you for trying our experimental support for Astro on Firebase Hosting.
+   While this integration is maintained by Googlers it is not a supported Firebase product.
+   Issues filed on GitHub will be addressed on a best-effort basis by maintainers and other community members.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/frameworks-overview
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2023-11-10T00:12:00.959Z] Error: ENOENT: no such file or directory, lstat '/Users/karim/Desktop/OSU/CS%20361/Course%20Project/CS361_Project/frontend/dist/client'
+[error] 
+[error] Error: An unexpected error has occurred.

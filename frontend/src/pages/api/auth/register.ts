@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import { getAuth } from "firebase-admin/auth";
-// @ts-ignore
+export const prerender = false;
 import { app } from "../../../firebase/server";
 
 export const POST: APIRoute = async ({ request, redirect }) => {

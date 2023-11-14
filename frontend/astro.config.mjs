@@ -9,7 +9,7 @@ import autoImport from "astro-auto-import";
 // https://astro.build/config
 export default defineConfig({
   adapter: node({
-    mode: "standalone"
+    mode: "middleware"
   }),
   output: 'hybrid',
   integrations: [tailwind(), svelte(), react(), autoImport()],
