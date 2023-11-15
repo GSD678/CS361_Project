@@ -16,6 +16,7 @@
     "@astrojs/react": "^3.0.4",
     "@astrojs/svelte": "^4.0.3",
     "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/vercel": "^5.2.0",
     "@nextui-org/react": "^2.2.0",
     "@popperjs/core": "^2.11.8",
     "@types/bootstrap": "^5.2.8",
