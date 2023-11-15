@@ -5,11 +5,11 @@ import Layout from "../layouts/baseLayout.astro";
 
 /* Check if the user is authenticated */
 const auth = getAuth(app);
-if (Astro.cookies.has("session")) {
-    const sessionCookie = Astro.cookies.get("session").value;
-    const decodedCookie = await auth.verifySessionCookie(sessionCookie);
+if (Astro?.cookies?.has("session")) {
+    const sessionCookie = Astro?.cookies?.get("session")?.value ?? '';
+    const decodedCookie = await auth?.verifySessionCookie(sessionCookie);
     if (decodedCookie) {
-        return Astro.redirect("/dashboard");
+        return Astro?.redirect("/dashboard");
     }
 }
 ---
@@ -34,7 +34,9 @@ if (Astro.cookies.has("session")) {
     </div>
 
 </Layout>
+
 <script>
+
     import {
         getAuth,
         inMemoryPersistence,
