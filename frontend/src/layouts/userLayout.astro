@@ -1,0 +1,25 @@
+---
+import Header from '../components/userHeader.svelte';
+import Footer from '../components/footer.svelte';
+
+const { title } = Astro.props
+---
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>{title}</title>
+</head>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+<body>
+<div class="flex flex-wrap items-center justify-between">
+    <Header client:load />
+</div>
+
+<div class="flex flex-col justify-center items-center h-screen" style="display: flex; ">
+    <slot/>
+</div>
+<Footer/>
+</body>
+</html>

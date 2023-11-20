@@ -36,5 +36,5 @@ export const GET: APIRoute = async ({ request, cookies, redirect }) => {
         path: "/",
     });
 
-    return redirect("/about");
+    return redirect("/account");
 };

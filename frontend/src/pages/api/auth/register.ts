@@ -1,8 +1,8 @@
 import type { APIRoute } from "astro";
 import { getAuth } from "firebase-admin/auth";
-export const prerender = false;
 import { app } from "../../../firebase/server";
-
+import {credential, firestore} from "firebase-admin";
+export const prerender = false;
 export const POST: APIRoute = async ({ request, redirect }) => {
     const auth = getAuth(app);
 
@@ -25,6 +25,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
             email,
             password,
         });
+        firestore().collection("users").doc(email).set({ email: email, password: password });
     } catch (error: any) {
         return new Response(
             "Something went wrong",
