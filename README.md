@@ -36,5 +36,5 @@ The endpoint will send the following response as a JSON: <br>
 </p>
 
 UML Diagram:<br>
-<img src="https://raw.githubusercontent.com/GSD678/CS361_Project/main/frontend/public/UML.png"/>
+![Model](https://github.com/GSD678/CS361_Project/blob/main/frontend/public/UML.png)
 
