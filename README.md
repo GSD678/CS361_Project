@@ -5,8 +5,8 @@
 How to request data:
 
 Send a post request to the following URL:
-URL: https://elitemma.vercel.app/api/partner/getURL <br>
 <br>Method: "POST" <br>
+https://elitemma.vercel.app/api/partner/getURL <br>
 
 For the request body, send it as a JSON with the following format and using the id of the technologies: <br>
 
