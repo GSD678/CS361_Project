@@ -3,48 +3,10 @@ import Layout from "../layouts/userLayout.astro";
 import { app } from "../firebase/server";
 import { getFirestore } from "firebase-admin/firestore";
 
-interface User {
-    name: string;
-    email: string;
-    password: string;
-}
-
-const { id } = Astro.params;
-
-if (!id) {
-    return Astro.redirect("/404");
-}
-
-const db = getFirestore(app);
-const friendsRef = db.collection("friends");
-const friendSnapshot = await friendsRef.doc(id).get();
-
-if (!friendSnapshot.exists) {
-    return Astro.redirect("/404");
-}
-
-const friend = friendSnapshot.data() as Friend;
+// add the `id` parameter to the `get` function and call partner endpoint
 ---
 
-<Layout title="Edit {friend.name}">
-    <h1>Edit {friend.name}</h1>
-    <p>Here you can edit or delete your friend's data.</p>
-    <form method="post" action={`/api/friends/${id}`}>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" value={friend.name} />
-        <label for="age">Age</label>
-        <input type="number" id="age" name="age" value={friend.age} />
-        <label for="isBestFriend">Is best friend?</label>
-        <input
-                type="checkbox"
-                id="isBestFriend"
-                name="isBestFriend"
-                checked={friend.isBestFriend}
-        />
-        <button type="submit">Edit friend</button>
-    </form>
-    <button type="button" id="delete-document">Delete</button>
-</Layout>
+
 <script>
     const deleteButton = document.getElementById(
         "delete-document"
