@@ -38,3 +38,5 @@ The endpoint will send the following response as a JSON: <br>
 UML Diagram:<br>
 ![Model](https://github.com/GSD678/CS361_Project/blob/main/frontend/public/UML.png)
 
+Here is an example call to the endpoint using postman: <br>
+![Model](https://github.com/GSD678/CS361_Project/blob/main/frontend/public/postman.png)
