@@ -35,5 +35,6 @@ The endpoint will send the following response as a JSON: <br>
 }
 </p>
 
-UML Diagram:
-![Screenshot 2023-11-20 at 5.05.56 PM.png](..%2F..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Frx%2F6z27706j2lj93mtd3fc0g0f80000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_gUCj7G%2FScreenshot%202023-11-20%20at%205.05.56%E2%80%AFPM.png)
+UML Diagram:<br>
+<img src="https://raw.githubusercontent.com/GSD678/CS361_Project/main/frontend/public/UML.png"/>
+
