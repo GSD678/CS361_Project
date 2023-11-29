@@ -5,13 +5,13 @@
     let bar = 'qux'
     let result = null
 
-    async function doPost () {
-        const res = await fetch('https://httpbin.org/post', {
-            method: 'POST',
-            body: JSON.stringify({
-                foo,
-                bar
-            })
+    async function getProfile () {
+        const res = await fetch('https://codecombos.vercel.app/api/sendusers?email=testing@ss.com/', {
+            method: 'GET',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
         })
 
         const json = await res.json()
@@ -24,7 +24,7 @@
 <Input bind:value={foo} />
 <Label>Last Name</Label>
 <Input bind:value={bar} />
-<Button type="button" on:click={doPost}>
+<Button type="button" on:click={getProfile()}>
     Post it.
 </Button>
 <p>
