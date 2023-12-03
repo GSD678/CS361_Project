@@ -1,15 +1,16 @@
 import type { APIRoute } from "astro";
 import { getAuth } from "firebase-admin/auth";
 import { app } from "../../../firebase/server";
-import {credential, firestore} from "firebase-admin";
+import { firestore} from "firebase-admin";
 export const prerender = false;
 export const POST: APIRoute = async ({ request, redirect }) => {
     const auth = getAuth(app);
-
+    console.log("update")
     /* Get form data */
-    const formData = await request.formData();
-    const email = formData.get("email")?.toString();
-    const password = formData.get("password")?.toString();
+    const reqBody = await request.json();
+    const email = reqBody.Email;
+    const password = reqBody.Password;
+    console.log(email, password)
 
 
     if (!email || !password) {
@@ -19,11 +20,18 @@ export const POST: APIRoute = async ({ request, redirect }) => {
         );
     }
 
+    const UID = auth.getUserByEmail(email).then((userRecord) => {
+        return userRecord.uid;
+    } ).catch((error) => {
+        console.log('Error fetching user data:', error);
+    } );
+    console.log(UID)
     /* Create user */
     try {
-        await auth.createUser({
-            email,
-            password,
+
+        const hh = await auth.updateUser(UID.toString(), {
+            email: email,
+            password: password,
         });
         firestore().collection("users").doc(email).set({ email: email, password: password });
     } catch (error: any) {

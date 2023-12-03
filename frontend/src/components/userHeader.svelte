@@ -17,10 +17,6 @@
     </NavUl>
     <Avatar id="user-drop" src="defaultProfile.png" class="cursor-pointer" />
     <Dropdown triggeredBy="#user-drop">
-        <DropdownHeader>
-            <span class="block text-sm">Bonnie Green</span>
-            <span class="block truncate text-sm font-medium">name@flowbite.com</span>
-        </DropdownHeader>
         <DropdownItem href="/api/auth/signout">Sign out</DropdownItem>
     </Dropdown>
 </Navbar>
