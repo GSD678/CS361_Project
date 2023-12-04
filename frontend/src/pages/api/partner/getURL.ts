@@ -39,8 +39,14 @@ export const POST: APIRoute = async ({ request }) => {
 
     let responseOptions = {
         headers: {
-            'Content-Type': 'application/json'
-        }
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Max-Age': '3600'
+
+        },
+        status: 204
     };
 
     return new Response(JSON.stringify(responseObj), responseOptions);
