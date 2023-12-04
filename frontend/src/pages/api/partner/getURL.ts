@@ -38,7 +38,7 @@ export const POST: APIRoute = async ({ request }) => {
     };
 
     if (request.method === "OPTIONS") {
-        return new Response(JSON.stringify(responseObj), {
+        return new Response(null, {
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
