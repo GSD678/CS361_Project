@@ -25,25 +25,40 @@ export const POST: APIRoute = async ({ request }) => {
     let styling = reqData["styling"];
     let deployment = reqData["deployment"];
 
+    let frontendObject = {name: "", url: ""};
+    let backendObject = {name: "", url: ""};
+    let databaseObject = {name: "", url: ""};
+    let stylingObject = {name: "", url: ""};
+    let deploymentObject = {name: "", url: ""};
+
     let {data:frontendData, error: frontendURLERROR} = await supabase.from("frontend_technologies").select('name, url').eq('id', front);
-    // @ts-ignore
-    let frontendObject = frontendData[0];
+    if (frontendData) {
+         frontendObject = frontendData[0];
+    }
 
     let {data:backendData, error: backendURLERROR } = await supabase.from("backend_technologies").select('name, url').eq('id', back);
-    // @ts-ignore
-    let backendObject = backendData[0];
+
+    if (backendData) {
+         backendObject = backendData[0];
+    }
 
     let {data:databaseData, error: databaseURLERROR} = await supabase.from("databases").select('name, url').eq('id', database);
-    // @ts-ignore
-    let databaseObject = databaseData[0];
+
+    if (databaseData) {
+        databaseObject = databaseData[0];
+    }
 
     let {data:stylingData, error: stylingURLERROR} = await supabase.from("styling_libraries").select('name, url').eq('id', styling);
-    // @ts-ignore
-    let stylingObject = stylingData[0];
+
+    if (stylingData) {
+        stylingObject = stylingData[0];
+    }
 
     let {data:deploymentData, error: deploymentURLERROR} = await supabase.from("deployment").select('name, url').eq('id', deployment);
-    // @ts-ignore
-    let deploymentObject = deploymentData[0];
+
+    if (deploymentData) {
+         deploymentObject = deploymentData[0];
+    }
 
     let responseObj = {
         [frontendObject.name]: frontendObject.url,
