@@ -2,6 +2,20 @@ import type { APIRoute } from "astro";
 import { supabase } from "../../../lib/supabase";
 
 export const POST: APIRoute = async ({ request }) => {
+
+    if (request.method === "OPTIONS") {
+        return new Response(null, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'POST, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Max-Age': '3600'
+            },
+            status: 204
+        });
+    }
+
     let reqData = await request.json();
     let front = reqData["frontend"];
     let back = reqData["backend"];
@@ -37,18 +51,6 @@ export const POST: APIRoute = async ({ request }) => {
         [deploymentObject.name]: deploymentObject.url
     };
 
-    if (request.method === "OPTIONS") {
-        return new Response(null, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Max-Age': '3600'
-            },
-            status: 204
-        });
-    }
     let responseOptions = {
         headers: {
             'Content-Type': 'application/json',
@@ -56,7 +58,7 @@ export const POST: APIRoute = async ({ request }) => {
             'Access-Control-Allow-Methods': 'POST, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Max-Age': '3600'
-        },
+        }
     };
 
     return new Response(JSON.stringify(responseObj), responseOptions);
