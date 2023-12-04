@@ -3,15 +3,17 @@ import { supabase } from "../../../lib/supabase";
 
 export const POST: APIRoute = async ({ request }) => {
 
+    let corsHeaders = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Max-Age': '3600'
+    };
+
     if (request.method === "OPTIONS") {
         return new Response(null, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Max-Age': '3600'
-            },
+            headers: corsHeaders,
             status: 204
         });
     }
@@ -52,13 +54,7 @@ export const POST: APIRoute = async ({ request }) => {
     };
 
     let responseOptions = {
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': '*',
-            'Access-Control-Allow-Headers': 'Content-Type',
-            'Access-Control-Max-Age': '3600'
-        }
+        headers: corsHeaders
     };
 
     return new Response(JSON.stringify(responseObj), responseOptions);
