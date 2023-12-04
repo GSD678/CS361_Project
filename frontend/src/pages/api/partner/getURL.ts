@@ -44,9 +44,7 @@ export const POST: APIRoute = async ({ request }) => {
             'Access-Control-Allow-Methods': 'POST, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Max-Age': '3600'
-
         },
-        status: 204
     };
 
     return new Response(JSON.stringify(responseObj), responseOptions);
