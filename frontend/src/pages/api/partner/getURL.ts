@@ -8,7 +8,7 @@ export const POST: APIRoute = async ({ request }) => {
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'POST, OPTIONS',
+                'Access-Control-Allow-Methods': '*',
                 'Access-Control-Allow-Headers': 'Content-Type',
                 'Access-Control-Max-Age': '3600'
             },
@@ -55,7 +55,7 @@ export const POST: APIRoute = async ({ request }) => {
         headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'POST, OPTIONS',
+            'Access-Control-Allow-Methods': '*',
             'Access-Control-Allow-Headers': 'Content-Type',
             'Access-Control-Max-Age': '3600'
         }
