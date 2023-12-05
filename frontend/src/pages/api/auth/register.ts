@@ -6,6 +6,7 @@ import {firestore} from "firebase-admin";
 export const POST: APIRoute = async ({ request, redirect }) => {
     const auth = getAuth(app);
 
+    console.log("Registering user")
     /* Get form data */
     const formData = await request.formData();
     const email = formData.get("email")?.toString();
