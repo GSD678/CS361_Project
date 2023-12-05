@@ -1,3 +1,3 @@
-export async function get(req, res) {
+export async function GET(req, res) {
     return new Response("Hello World!");
 }
