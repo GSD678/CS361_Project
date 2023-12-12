@@ -53,7 +53,6 @@
                 "Password": password
             })
         })
-
     }
 
 </script>
