@@ -2,73 +2,6 @@
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
 
     let searchTerm = '';
-    let items = [
-        {
-            id: 1,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-        {
-            id: 2,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-        {
-            id: 3,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-        {
-            id: 4,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-        {
-            id: 5,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-        {
-            id: 6,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-        {
-            id: 7,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-        {
-            id: 8,
-            name: 'Lorem ipsum dolor sit amet',
-            type: 'Lorem ipsum dolor sit amet',
-            location: 'Lorem ipsum dolor sit amet',
-            date: 'Lorem ipsum dolor sit amet',
-            participants: 'Lorem ipsum dolor sit amet',
-        },
-
-    ];
     let events = [];
     //fetch the events from a get endpoint
     async function getEvents() {
@@ -80,8 +13,6 @@
     getEvents().then((data) => {
         console.log(data);
     });
-
-
     $: filteredItems = events.filter((item) => item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
 </script>
 <Table>

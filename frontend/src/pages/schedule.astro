@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/baseLayout.astro';
+import { Image } from 'astro:assets';
+import myImage from "../images/schedule.png";
 ---
 <Layout title="Schedule">
-    <h1>
+    <h1 class:list="">
         Schedule
     </h1>
     <p>
-        Coming soon!
+        <Image src={myImage} alt="Schedule" />
     </p>
 </Layout>
