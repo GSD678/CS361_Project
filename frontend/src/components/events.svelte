@@ -5,7 +5,7 @@
     let events = [];
     //fetch the events from a get endpoint
     async function getEvents() {
-        const res = await fetch('https://elitemma.vercel.app/api/events/getAll', {method: 'GET', headers: {'Content-Type': 'application/json'}})
+        const res = await fetch('http://localhost:4321/api/events/getAll', {method: 'GET', headers: {'Content-Type': 'application/json'}})
         let data = await res.json();
         events = data;
         return data;
