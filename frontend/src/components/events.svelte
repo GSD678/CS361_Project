@@ -1,6 +1,5 @@
 <script>
     import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, TableSearch } from 'flowbite-svelte';
-    import {get} from "svelte/store";
 
     let searchTerm = '';
     let items = [
@@ -73,9 +72,8 @@
     let events = [];
     //fetch the events from a get endpoint
     async function getEvents() {
-        const res = await fetch('https://codecombos.vercel.app/api/events/getAll', {method: 'GET', headers: {'Content-Type': 'application/json'}})
-        const json = await res.json();
-        let data = json;
+        const res = await fetch('https://elitemma.vercel.app/api/events/getAll', {method: 'GET', headers: {'Content-Type': 'application/json'}})
+        let data = await res.json();
         events = data;
         return data;
     }
